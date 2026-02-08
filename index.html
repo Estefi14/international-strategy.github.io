@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International Strategy: Stayfilm & Institutional Voids</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #F8FAFC; color: #1E293B; }
+        
+        /* Chart Container Styling */
+        .chart-container { 
+            position: relative; 
+            width: 100%; 
+            max-width: 600px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            height: 350px; 
+            max-height: 400px; 
+        }
+        @media (min-width: 768px) {
+            .chart-container { height: 400px; }
+        }
+
+        /* Palette: Vibrant & Professional (Blue/Purple/Pink) */
+        .bg-gradient-header { background: linear-gradient(135deg, #1E3A8A 0%, #7C3AED 100%); }
+        .text-brand-blue { color: #1E3A8A; }
+        .text-brand-purple { color: #7C3AED; }
+        .text-brand-pink { color: #DB2777; }
+        .bg-brand-blue { background-color: #1E3A8A; }
+        .bg-brand-purple { background-color: #7C3AED; }
+        .bg-brand-pink { background-color: #DB2777; }
+
+        /* Card Styling */
+        .card { 
+            background-color: white; 
+            border-radius: 0.75rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); 
+            padding: 1.5rem; 
+            border-top: 4px solid transparent;
+            transition: transform 0.2s;
+        }
+        .card:hover { transform: translateY(-2px); }
+        .card-blue { border-top-color: #1E3A8A; }
+        .card-purple { border-top-color: #7C3AED; }
+        .card-pink { border-top-color: #DB2777; }
+    </style>
+    <!-- 
+        Palette: "Vibrant Professional"
+        Primary: #1E3A8A (Deep Blue)
+        Secondary: #7C3AED (Electric Purple)
+        Accent: #DB2777 (Vivid Pink)
+        SVG/Mermaid Check: NONE USED. Confirmed.
+    -->
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="bg-gradient-header text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold tracking-tight">International Strategy</h1>
+                <p class="text-xs font-light opacity-90">Week 1: PESTLE, CAGE & The Stayfilm Case</p>
+            </div>
+            <div class="hidden md:block text-right">
+                <div class="text-sm font-bold bg-white/20 px-3 py-1 rounded inline-block">06:00 AM - 09:00 AM</div>
+                <p class="text-xs mt-1 opacity-80">EAFIT University</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-8 space-y-12">
+
+        <!-- Section 1: Introduction & Icebreaker -->
+        <section id="intro">
+            <div class="mb-6">
+                <h2 class="text-3xl font-bold text-gray-900">1. Welcome & Warm Up</h2>
+                <p class="text-gray-600 mt-2 text-lg">Setting the stage for Global Strategy and Risk Analysis.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Icebreaker Activity Card -->
+                <div class="card card-pink md:col-span-2">
+                    <h3 class="text-xl font-bold text-brand-pink mb-2">Icebreaker: "Global Risk Roulette"</h3>
+                    <p class="text-gray-700 mb-4"><strong>Objective:</strong> Wake up the class and activate prior knowledge about global markets.</p>
+                    <div class="bg-pink-50 p-4 rounded-lg border border-pink-100">
+                        <h4 class="font-bold text-sm text-pink-800 uppercase mb-2">Instructions for Professor:</h4>
+                        <ol class="list-decimal list-inside text-sm text-gray-700 space-y-2">
+                            <li>Project 5 flags rapidly (e.g., China, Russia, Argentina, USA, Switzerland).</li>
+                            <li>Ask students to shout <strong>ONE word</strong> representing a "Risk" and <strong>ONE word</strong> representing an "Opportunity" for each.</li>
+                            <li><strong>Debrief (5 mins):</strong> Connect their answers to the theory: "War" = Political Risk, "Inflation" = Economic Risk, "Censorship" = Legal/Social Risk. This leads directly into PESTLE.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Learning Objectives -->
+                <div class="card card-blue">
+                    <h3 class="text-xl font-bold text-brand-blue mb-2">Today's Goals</h3>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="mr-2 text-brand-blue">⬤</span>
+                            Analyze "Institutional Voids" through the Stayfilm Case.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 text-brand-blue">⬤</span>
+                            Apply CAGE Framework to measure distance.
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-2 text-brand-blue">⬤</span>
+                            Evaluate cities for HQ relocation strategy.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Stayfilm Case Study (Answering the 3 Questions) -->
+        <section id="case-study" class="bg-gray-100 -mx-4 px-4 py-10">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-8">
+                    <h2 class="text-3xl font-bold text-gray-900">2. Stayfilm Case Analysis</h2>
+                    <p class="text-gray-600 mt-2">Guided analysis of the assigned case questions. Use these visual aids to facilitate the discussion.</p>
+                </div>
+
+                <!-- Q1: Business Model Strengths & Changes -->
+                <div class="mb-10">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="bg-brand-blue text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">Q1</span>
+                        Strengths vs. Required Changes
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-green-500">
+                            <h4 class="font-bold text-lg text-green-700 mb-3">Strengths (The Digital Advantage)</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><strong>Automated Video Creation:</strong> Proprietary AI technology lowers barriers for users.</li>
+                                <li><strong>Scalability:</strong> Cloud-based structure allows global reach without physical assets.</li>
+                                <li><strong>Partnerships:</strong> Collaboration with Facebook (Internet.org) provided massive initial user base.</li>
+                                <li><strong>Asset Light:</strong> Low fixed costs compared to traditional production studios.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow border-l-4 border-red-500">
+                            <h4 class="font-bold text-lg text-red-700 mb-3">Changes Needed for Globalization</h4>
+                            <ul class="space-y-2 text-sm text-gray-700">
+                                <li><strong>Monetization Shift:</strong> Move from B2C (Ads/Freemium) to B2B (Corporate SaaS) for stable revenue.</li>
+                                <li><strong>Platform Independence:</strong> Reduce over-reliance on Facebook's ecosystem.</li>
+                                <li><strong>Language & Culture:</strong> Interface and AI themes must adapt to non-Portuguese contexts.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2: Push & Pull Factors (Why Move?) -->
+                <div class="mb-10">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="bg-brand-blue text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">Q2</span>
+                        Why Move the HQ? (Institutional Voids)
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">Stayfilm's decision in 2017 was driven by the "Push" of Brazil's adverse environment and the "Pull" of global strategic needs.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Push Visualization -->
+                        <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                            <h4 class="font-bold text-red-800 text-center mb-4 uppercase tracking-wide">Push Factors (Brazil Context)</h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-red-400">
+                                    <strong>"Custo Brasil":</strong> Complex tax system and bureaucracy stifle speed.
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-red-400">
+                                    <strong>Capital Void:</strong> Lack of Venture Capital for Series A/B scaling.
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-red-400">
+                                    <strong>Economic Recession:</strong> 2015-2016 crisis reduced local B2B demand.
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-red-400">
+                                    <strong>Talent Gap:</strong> Shortage of specialized AI/Tech developers.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pull Visualization -->
+                        <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                            <h4 class="font-bold text-green-800 text-center mb-4 uppercase tracking-wide">Pull Factors (Global Strategy)</h4>
+                            <div class="space-y-3">
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-green-400">
+                                    <strong>Hard Currency:</strong> Revenue in USD/EUR protects against BRL volatility.
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-green-400">
+                                    <strong>Innovation Hubs:</strong> Access to mature ecosystems (e.g., AI in Toronto).
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-green-400">
+                                    <strong>Global Mindset:</strong> Amazon mentors challenged them to "think big."
+                                </div>
+                                <div class="bg-white p-3 rounded shadow-sm text-sm border-l-4 border-green-400">
+                                    <strong>Credibility:</strong> A foreign HQ signals stability to global clients.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3: City Evaluation (Radar Chart) -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+                        <span class="bg-brand-blue text-white w-8 h-8 rounded-full flex items-center justify-center text-sm mr-3">Q3</span>
+                        Strategic Evaluation of HQ Locations
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-6">Comparative analysis of London, Miami, and Toronto based on key strategic drivers for a digital scale-up.</p>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <div class="lg:col-span-2 bg-white p-4 rounded-lg shadow-md">
+                            <div class="chart-container">
+                                <canvas id="radarChart"></canvas>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="card card-purple p-4">
+                                <h4 class="font-bold text-brand-purple">Toronto</h4>
+                                <p class="text-xs text-gray-600 mt-1"><strong>The Tech Choice:</strong> High AI talent, strong gov support, stability. Challenge: Cold, cultural distance.</p>
+                            </div>
+                            <div class="card card-blue p-4">
+                                <h4 class="font-bold text-brand-blue">Miami</h4>
+                                <p class="text-xs text-gray-600 mt-1"><strong>The Cultural Choice:</strong> Gateway to LatAm, high cultural fit, tax friendly. Challenge: Less "Deep Tech" talent.</p>
+                            </div>
+                            <div class="card card-pink p-4">
+                                <h4 class="font-bold text-brand-pink">London</h4>
+                                <p class="text-xs text-gray-600 mt-1"><strong>The Creative Choice:</strong> Global media hub, access to Europe. Challenge: High cost, Brexit risk.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Theory Deep Dive (Slides Content) -->
+        <section id="theory">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">3. Theory Deep Dive</h2>
+                <p class="text-gray-600 mt-2">Connect the case study to the academic frameworks (PESTLE & CAGE).</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Slide 1: PESTLE in Context -->
+                <div class="card card-blue">
+                    <h3 class="text-xl font-bold text-brand-blue mb-4">Topic: PESTLE Analysis</h3>
+                    <p class="text-sm text-gray-600 mb-4">Explain how macro-factors impact strategy using Stayfilm examples.</p>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-blue-50 p-3 rounded">
+                            <span class="block text-xs font-bold text-blue-800">Political</span>
+                            <span class="text-xs text-gray-700">Brexit (London risk), Brazil instability.</span>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded">
+                            <span class="block text-xs font-bold text-purple-800">Economic</span>
+                            <span class="text-xs text-gray-700">Currency volatility, Cost of labor.</span>
+                        </div>
+                        <div class="bg-pink-50 p-3 rounded">
+                            <span class="block text-xs font-bold text-pink-800">Social</span>
+                            <span class="text-xs text-gray-700">Privacy concerns (Civil Society), Cultural trends.</span>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded">
+                            <span class="block text-xs font-bold text-green-800">Tech</span>
+                            <span class="text-xs text-gray-700">AI maturity, Broadband infrastructure.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: CAGE Framework -->
+                <div class="card card-purple">
+                    <h3 class="text-xl font-bold text-brand-purple mb-4">Topic: CAGE Distance Framework</h3>
+                    <p class="text-sm text-gray-600 mb-2">Distance is not just miles. Use this chart to compare the "Distance" from Brazil.</p>
+                    <div class="chart-container h-64">
+                        <canvas id="cageChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Concepts: Political Risk & Civil Society -->
+            <div class="mt-8 card card-pink">
+                <h3 class="text-xl font-bold text-brand-pink mb-4">Political Risk & Civil Society</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-2">Institutional Voids (Meyer & Thein)</h4>
+                        <p class="text-sm text-gray-700 mb-2">Explain that "voids" are absences of market intermediaries (regulatory systems, reliable data, contract enforcement). Stayfilm left Brazil to escape these voids.</p>
+                        <p class="text-sm text-gray-700"><strong>Teaching Tip:</strong> Ask students "What is a 'void' you encounter in Colombia?" (e.g., slow justice system).</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-800 mb-2">Civil Society Interactions (Bruijn)</h4>
+                        <p class="text-sm text-gray-700 mb-2">NGOs and Civil Society can be partners or adversaries. For a data company like Stayfilm, privacy advocates are key stakeholders.</p>
+                        <p class="text-sm text-gray-700"><strong>Key concept:</strong> Legitimacy. Internationalizing requires gaining legitimacy from local stakeholders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Class Agenda -->
+        <section id="agenda">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">4. Class Agenda (06:00 - 09:00)</h2>
+            <div class="bg-white rounded-xl shadow p-6">
+                <div class="relative border-l-4 border-brand-blue ml-3 space-y-8">
+                    
+                    <!-- 06:00 -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-brand-blue w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg">06:00 - 06:30 | Icebreaker & Case Intro</h4>
+                        <p class="text-sm text-gray-600">Global Risk Roulette Activity. Brief History of Stayfilm.</p>
+                    </div>
+
+                    <!-- 06:30 -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-brand-purple w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg">06:30 - 07:15 | Concept Deep Dive</h4>
+                        <p class="text-sm text-gray-600">Lecture: PESTLE & CAGE applied to the Case. Push/Pull discussion.</p>
+                    </div>
+
+                    <!-- 07:15 -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-brand-purple w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg">07:15 - 07:45 | Political Risk & Institutions</h4>
+                        <p class="text-sm text-gray-600">Discussion on Readings (Meyer, Rice). Institutional Voids.</p>
+                    </div>
+
+                    <!-- Break -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-yellow-500 w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg text-yellow-600">07:45 - 08:05 | Coffee Break (20 Mins)</h4>
+                    </div>
+
+                    <!-- 08:05 -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-brand-pink w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg">08:05 - 08:35 | Group Activity: The City Pitch</h4>
+                        <p class="text-sm text-gray-600">Students analyze and pitch one city (See Activity Section).</p>
+                    </div>
+
+                    <!-- 08:35 -->
+                    <div class="relative pl-8">
+                        <div class="absolute -left-3 top-0 bg-brand-blue w-6 h-6 rounded-full border-4 border-white"></div>
+                        <h4 class="font-bold text-lg">08:35 - 09:00 | Individual Task & Wrap Up</h4>
+                        <p class="text-sm text-gray-600">Risk Memo Assessment. Conclusion on Trade Agreements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Activities & Rubrics -->
+        <section id="activities">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">5. Student Assessment Activities (2%)</h2>
+                <p class="text-gray-600 mt-2">Interactive components to apply theory and grade progress.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Group Activity -->
+                <div class="card card-purple flex flex-col h-full">
+                    <div class="mb-4">
+                        <span class="bg-brand-purple text-white text-xs font-bold px-2 py-1 rounded">GROUP WORK (1%)</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2">The Headquarters Pitch</h3>
+                    </div>
+                    <div class="prose prose-sm text-gray-600 flex-grow">
+                        <p><strong>Scenario:</strong> You are external consultants hired by the Almeida brothers. Your team is assigned ONE city (Miami, Toronto, or London).</p>
+                        <p><strong>Task:</strong> Prepare a 3-minute pitch answering: Why is this city the best fit despite its risks?</p>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Identify 1 Key Opportunity (Pull Factor).</li>
+                            <li>Identify 1 Key Distance Challenge (CAGE) and how to mitigate it.</li>
+                            <li>Use data (e.g., tax rates, talent stats).</li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 bg-purple-50 p-4 rounded text-xs">
+                        <h4 class="font-bold text-brand-purple mb-2">Grading Rubric</h4>
+                        <div class="flex justify-between border-b border-purple-200 py-1"><span>Application of CAGE/PESTLE</span> <span>40%</span></div>
+                        <div class="flex justify-between border-b border-purple-200 py-1"><span>Use of Evidence/Data</span> <span>30%</span></div>
+                        <div class="flex justify-between py-1"><span>Persuasion & Clarity</span> <span>30%</span></div>
+                    </div>
+                </div>
+
+                <!-- Individual Activity -->
+                <div class="card card-pink flex flex-col h-full">
+                    <div class="mb-4">
+                        <span class="bg-brand-pink text-white text-xs font-bold px-2 py-1 rounded">INDIVIDUAL (1%)</span>
+                        <h3 class="text-2xl font-bold text-gray-800 mt-2">The "Risk Memo"</h3>
+                    </div>
+                    <div class="prose prose-sm text-gray-600 flex-grow">
+                        <p><strong>Scenario:</strong> Write a short email (150 words) to the CEO.</p>
+                        <p><strong>Task:</strong> Based on the city your group pitched, identify the single greatest <strong>Political or Institutional Risk</strong> (e.g., Visa changes, Data regulation, Trade war). Recommend one specific step to manage it.</p>
+                    </div>
+                    <div class="mt-6 bg-pink-50 p-4 rounded text-xs">
+                        <h4 class="font-bold text-brand-pink mb-2">Grading Rubric</h4>
+                        <div class="flex justify-between border-b border-pink-200 py-1"><span>Identification of Specific Risk</span> <span>50%</span></div>
+                        <div class="flex justify-between border-b border-pink-200 py-1"><span>Feasibility of Mitigation</span> <span>30%</span></div>
+                        <div class="flex justify-between py-1"><span>Professionalism & Brevity</span> <span>20%</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="mb-2 font-bold">International Strategy Class - Week 1</p>
+            <p class="text-xs opacity-60">Sources: Stayfilm Case, CIA World Factbook, Meyer & Thein (2014), Rice & Zegart (2012).</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Charts -->
+    <script>
+        // --- Shared Configuration for Tooltips & Labels ---
+        Chart.defaults.font.family = "'Roboto', sans-serif";
+        Chart.defaults.color = '#4B5563';
+        
+        // Label Wrapping Helper
+        function wrapLabel(label, maxChar = 16) {
+            if (label.length <= maxChar) return label;
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+
+            for (let i = 1; i < words.length; i++) {
+                if (currentLine.length + 1 + words[i].length <= maxChar) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        // Tooltip Callback Config
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) return label.join(' ');
+                    return label;
+                }
+            }
+        };
+
+        // --- 1. Radar Chart: City Evaluation ---
+        const radarLabels = ["Access to Venture Capital", "Tech Talent Availability", "Political Stability", "Cost Efficiency", "Market Access (LatAm)"];
+        const wrappedRadarLabels = radarLabels.map(l => wrapLabel(l));
+
+        const ctxRadar = document.getElementById('radarChart').getContext('2d');
+        new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: wrappedRadarLabels,
+                datasets: [
+                    {
+                        label: 'Toronto',
+                        data: [8, 9, 10, 6, 4], // Strong tech/stability, low LatAm access
+                        backgroundColor: 'rgba(124, 58, 237, 0.2)', // Purple
+                        borderColor: '#7C3AED',
+                        pointBackgroundColor: '#7C3AED',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'Miami',
+                        data: [6, 5, 8, 8, 10], // Gateway to LatAm, moderate tech
+                        backgroundColor: 'rgba(30, 58, 138, 0.2)', // Blue
+                        borderColor: '#1E3A8A',
+                        pointBackgroundColor: '#1E3A8A',
+                        borderWidth: 2
+                    },
+                    {
+                        label: 'London',
+                        data: [9, 8, 7, 3, 6], // Expensive (low cost score), High Capital, Brexit risk (Stability 7)
+                        backgroundColor: 'rgba(219, 39, 119, 0.2)', // Pink
+                        borderColor: '#DB2777',
+                        pointBackgroundColor: '#DB2777',
+                        borderWidth: 2
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        angleLines: { color: '#E2E8F0' },
+                        grid: { color: '#E2E8F0' },
+                        pointLabels: { font: { size: 11, weight: 'bold' } },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                },
+                plugins: {
+                    tooltip: tooltipConfig,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+
+        // --- 2. Bar Chart: CAGE Distance (Brazil vs Target Cities) ---
+        const cageLabels = ["Cultural Distance", "Admin/Political Distance", "Geographic Distance", "Economic Distance"];
+        const wrappedCageLabels = cageLabels.map(l => wrapLabel(l));
+
+        const ctxCage = document.getElementById('cageChart').getContext('2d');
+        new Chart(ctxCage, {
+            type: 'bar',
+            data: {
+                labels: wrappedCageLabels,
+                datasets: [
+                    {
+                        label: 'Brazil -> Miami (USA)',
+                        data: [3, 4, 3, 5], // Low Cultural/Geo, Mid Econ
+                        backgroundColor: '#1E3A8A'
+                    },
+                    {
+                        label: 'Brazil -> Toronto (CAN)',
+                        data: [7, 3, 6, 7], // High Cultural/Geo/Econ
+                        backgroundColor: '#7C3AED'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 10,
+                        title: { display: true, text: 'Estimated Distance Score (1-10)' }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                },
+                plugins: {
+                    tooltip: tooltipConfig,
+                    legend: { position: 'bottom' }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
