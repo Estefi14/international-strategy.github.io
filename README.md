@@ -1,1 +1,1 @@
-# international-strategy.github.io
+# international-strategy
